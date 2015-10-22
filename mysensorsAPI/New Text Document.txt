@@ -1,2 +1,58 @@
 $http.get('http://localhost:3000/senz/').success(function(response){$scope.dataItems = response;});
+        
+
+
+
+
+
+
+var senszes=angular.module('senzApi',[]);
+
+senszes.factory('senz',['$http',function($http){
+   var fac = {};
+           var config = {
+            headers: { 
+                
+                'Content-Type': 'application/json'
+            }
+        };
+      fac.getDevices = function(){
+         return $http.get('http://localhost:3000/senz/');
+      };
+      fac.addDevice= function(deviceData){
+         return $http.post('http://localhost:3000/senz/',deviceData,config);
+      };
+      
+      return fac;
+      
+  
+}]);
+
+
+
+
+
+
+
+ 
+        $scope.dataItems = [];
+        senz.getDevices().success(function(response){
+           $scope.dataItems=response;
+        });
+        
+
+
+
+        $scope.$on('ms-add-device', function (evt, data) {
             
+            senz.addDevice(data.msg).success(function(){
+               $scope.dataItems.push(data.msg);
+            });
+            
+            
+     
+             
+
+        });
+
+                
