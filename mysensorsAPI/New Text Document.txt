@@ -1,0 +1,2 @@
+$http.get('http://localhost:3000/senz/').success(function(response){$scope.dataItems = response;});
+            
