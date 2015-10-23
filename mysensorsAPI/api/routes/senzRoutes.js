@@ -7,8 +7,6 @@ var senzM = require('../models/senzModel.js');
 /* GET /senz/ listing of devices . */
 
 router.get('/',function(req,res,next){
-  res.header("Access-Control-Allow-Origin", "http://localhost:8383");
-  res.header("Access-Control-Allow-Methods", "GET, POST");
 	senzM.find(function(err,senzRoutes){
 	
 		if(err)return next(err);
@@ -19,8 +17,6 @@ router.get('/',function(req,res,next){
 /*POST /senz/ add a device*/
 
 router.post('/',function(req,res,next){
-  res.header("Access-Control-Allow-Origin", "http://localhost:8383");
-  res.header("Access-Control-Allow-Methods", "GET, POST");
 	senzM.create(req.body,function(err,post){
 		if(err) return next(err);
 		res.json(post);
@@ -30,9 +26,6 @@ router.post('/',function(req,res,next){
 });
  /* DELETE /senz/:id */ 
 router.delete('/:id',function(req,res,next){
-  res.header("Access-Control-Allow-Origin", "http://localhost:8383");
-  res.header("Access-Control-Allow-Methods", "GET, POST");
-
 	senzM.findByIdAndRemove(req.params.id,req.body, function(err,post){
 	
 			if(err)return next(err);
@@ -49,20 +42,14 @@ router.delete('/:id',function(req,res,next){
 	senzM.remove(function(err){
 		if(err) return next(err);
 		res.json('everything gone!');
-	
 	});
 
 }); */
 
 
 
-
-
-
 /* PUT /senz/:id */
 router.put('/:id',function(req,res,next){
-  res.header("Access-Control-Allow-Origin", "http://localhost:8383");
-  res.header("Access-Control-Allow-Methods", "GET, POST");
 	senzM.findByIdAndUpdate(req.params.id,req.body,function(err,post){
 	
 		if(err)return next(err);
