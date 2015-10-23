@@ -35,7 +35,7 @@ angular.module('msDashboard').controller("dashController",
         $scope.Devicedelete=function(id,device){
           senz.deleteDevice(id).success(function(){
           var index = $scope.dataItems.indexOf(device);
-          $scope.dataItems.splice(device,1); 
+          $scope.dataItems.splice(index,1);
           });
 
           
