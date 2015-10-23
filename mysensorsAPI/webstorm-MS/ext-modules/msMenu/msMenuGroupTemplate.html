@@ -1,0 +1,15 @@
+<li class="ms-menu-item" ng-click="clicked()">
+    <div class="ms-noselect">
+        <i class="fa {{icon}} ms-menu-icon"></i>
+        {{label}}
+        <i class="fa fa-chevron-left ms-group-indicator-left"
+           ng-class="{'fa-rotate-270':isOpen}"></i>
+    </div>
+
+</li>
+<div ng-show ="isOpen" class="ms-fade-in-animation ">
+    <div ng-transclude >
+
+    </div>
+
+</div>

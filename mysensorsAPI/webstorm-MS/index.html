@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>My Sensors</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/angular-gridster.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"     rel="stylesheet"/>
+    <link href="app/app.css" rel="stylesheet" />
+    <link href="ext-modules/msFramework/msFramework.css" rel="stylesheet" />
+    <link href="ext-modules/msDashboard/dashboard.css" rel="stylesheet"/>
+    <link href="ext-modules/msMenu/msMenu.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"     rel="stylesheet"/>
+
+
+    <script src="Scripts/jquery-2.1.3.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+
+
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-gridster.min.js"></script>
+
+    <script src="ext-modules/msMenu/msMenuModule.js"></script>
+    <script src="ext-modules/msMenu/msMenuController.js"></script>
+    <script src="ext-modules/msMenu/msMenuDirective.js"></script>
+    <script src="ext-modules/msMenu/msMenuItemDirective.js"></script>
+    <script src="ext-modules/msMenu/msMenuGroupDirective.js"></script>
+    <script src="ext-modules/msMenu/msMenuSrchDirective.js"></script>
+
+
+
+    <script src="ext-modules/msDashboard/msDashboardModule.js"></script>
+
+
+    <script src="ext-modules/msFramework/msFrameworkModule.js"></script>
+    <script src="ext-modules/msFramework/msFrameworkController.js"></script>
+    <script src="ext-modules/msFramework/msFrameworkDirective.js"></script>
+
+    <script src="ext-modules/msFramework/msAddDeviceDirective.js"></script>
+
+
+
+    <script src="app/appModule.js"></script>
+    <script src="app/appConfig.js"></script>
+    <script src="app/appConfigRoute.js"></script>
+<script src="ext-modules/services/senzAPI.js"></script>
+    <!--<script src="ext-modules/msDashboard/msDashboardModule.js"></script>-->
+    <script src="app/directives/msDashboardDirective.js"></script>
+    <script src="ext-modules/msDashboard/msDashboardController.js"></script>
+    <script src="app/directives/msRpiDirective.js"></script>
+    <script src="app/directives/msSensorsDirective.js"></script>
+  
+
+
+</head>
+<body class="container-fluid" id="content">
+    <ms-framework title="MySensors"
+                  subtitle="Connect, right now with #sensors you care about."
+                  icon="images/logo.png"      >
+       <ms-menu>
+            <ms-menu-item label="Dashboard" icon="dashboard"  route="dashboard"></ms-menu-item>
+
+
+
+            <ms-menu-group label="GET" icon="fa-hand-o-right">
+                <ms-menu-srch btnlabel="GET" > </ms-menu-srch>
+
+
+
+            </ms-menu-group>
+
+
+
+            <ms-menu-group label="DATA" icon="fa-database">
+                <input id="datauserdata" class="form-control" placeholder="Data to send" type="search" >
+                <ms-menu-srch btnlabel="DATA"></ms-menu-srch>
+
+            </ms-menu-group>
+
+
+
+            <ms-menu-group label="SHARE" icon="fa-share">
+                <ms-menu-srch btnlabel="SHARE"></ms-menu-srch>
+
+            </ms-menu-group>
+
+
+
+            <ms-menu-group label="UNSHARE" icon="fa-undo ">
+                <ms-menu-srch btnlabel="UNSHARE"></ms-menu-srch>
+
+            </ms-menu-group>
+
+
+           <ms-menu-item label="SENZORS" icon="settings_input_antenna" route="sensors" ></ms-menu-item>
+           <ms-menu-item label="RPI SENZ" icon="surround_sound" route="rpi" ></ms-menu-item>
+        </ms-menu>
+
+
+    </ms-framework>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<div class="dashboard-title">
+    <h3>Raspberry-Pi Senz</h3>
+
+
+</div><br>
+
+<div class="row" ng-controller="dashController">
+    <div>
+
+        <article data-ng-repeat="item in dataItems | filter: {img :'rpi'}" class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
+            <div class="device" >
+                <div class="thumbnail" id="event-panel">
+                    <div class="top-panel"><button class="grid-btn" ng-click="Devicedelete(item._id,item)"><i class="fa fa-close small"></i></button></div>
+                    <img ng-src="images/{{item.img}}.png" alt="">
+                    <div class="caption maxheight">
+                        <div class="box_inner">
+                            <h3 class="title" itemprop="name">{{item.name}}</h3>
+                          <div class="title-body">
+                                <!--device switch panel -->
+                                <div class="row press" style="margin-left: 0; margin-bottom:0;margin-right:0;">
+                                   <ul class="list-inline switch-grid">
+                                      <li >
+                                         <input type="checkbox" id="{{item.serial}}" ng-model="item.status" ng-true-value="'Active'" ng-false-value="'Inactive'" ng-click="statusChange(item._id,item.status)" class="cbx hidden"/>
+                                         <label for="{{item.serial}}" class="lbl"></label>
+                                      </li>
+                                      <li>
+                                         <!--<button class="btn btn-primary">Switch</button>-->
+                                      </li>
+                                      <li>
+                                         <!--<button class="btn btn-primary">Switch</button>-->
+
+                                      </li>
+                                   </ul>
+                                </div>
+                                <!-- to check the toggle switch -->
+                                {{item.status}}
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </article>
+    </div>
+</div>

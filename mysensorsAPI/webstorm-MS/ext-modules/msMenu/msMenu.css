@@ -1,0 +1,125 @@
+.ms-menu-area {
+    position: relative;
+    background-color: #333333;
+    color: #ccc;
+    padding-left: 0;
+    width:200px;
+    min-height: 100vh;
+    padding-top: 30px;
+    float:left;
+    -webkit-user-select: none; /* Chrome/Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+ */
+
+}
+
+
+.ms-menu-area ul{
+    padding-left: 0;
+}
+
+.ms-menu-area .btn:hover{
+    color:#ccc;
+
+}
+
+.ms-menu{
+    list-style-type: none;
+    vertical-align: top;
+}
+
+.ms-menu ul{
+   display: inline;
+    list-style-type: none;
+    padding-left: 0;
+}
+.ms-menu li{
+line-height: 3em;
+    cursor: pointer;
+
+
+}
+.ms-menu li div{
+   display:inline-block;
+    width:90%;
+    padding-left:16px;
+
+
+}
+.ms-menu-item:hover{
+    background-color: #555;
+
+}
+.ms-noselect{
+    -webkit-touch-callout : none;
+    -webkit-user-select :none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+
+}
+ .ms-menu-icon{
+     margin-right: 10px;
+
+ }
+
+
+ .ms-searchArea li{
+     padding-top:2px;
+     text-align: center;
+
+ }
+
+.ms-searchArea li.bt{
+    padding-bottom: 13px;
+
+
+}
+
+.ms-group-indicator-left{
+    float:right;
+    color:#ddd;
+    margin-right:2px;
+    margin-top:15px;
+
+}
+.ms-fade-in-animation{
+
+    -moz-transition:linear all 0.5s;
+    -o-transition:linear all 0.5s;
+    -webkit-transition:linear all 0.5s;
+
+    transition:linear all 0.5s;
+}
+.ms-fade-in-animation.ng-hide{
+    opacity:0;
+}
+
+.ms-menu-active-indicator{
+    float:right;
+
+}
+
+@media screen and (max-width: 768px){
+
+    .ms-menu-area{
+        z-index:100;
+        width:95%;
+        font-size: large;
+        -webkit-transition:all linear 0.1s;
+        transition:all linear 0.3s;
+
+    }
+    .ms-menu-area.ng-hide{
+     
+       padding: 10px 0 0 0;
+       opacity:0;
+  
+       
+    }
+    
+
+
+}
+
+

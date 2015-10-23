@@ -1,0 +1,19 @@
+<style>
+    .material-icons.md-16 { font-size: 16px; color: #28a4c9}
+    .material-icons.md-18 { font-size: 18px; }
+    .material-icons.md-24 { font-size: 24px; }
+    .material-icons.md-36 { font-size: 36px; }
+    .material-icons.md-48 { font-size: 48px; }
+
+</style>
+
+
+<li class="ms-menu-item">
+    <div class="ms-noselect">
+        <!--<i class="fa {{icon}} ms-menu-icon"></i>-->
+        <i class="material-icons md-16">{{icon}}</i>
+        &nbsp; {{label}}
+
+    </div>
+    <i ng-if="isActive()" class="fa fa-2x fa-caret-left ms-menu-active-indicator" ></i>
+</li>

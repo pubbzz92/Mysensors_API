@@ -1,0 +1,66 @@
+﻿
+<div class="ms-title-bar">
+    <div class="row">
+        <div class="ms-logo-area col-sm-6">
+
+            <img class="ms-icon" ng-src="{{icon}}" />
+            <div class="ms-title-area">
+
+                <p class="ms-logo-title">{{title}}</p>
+                <p class="ms-logo-subtitle">{{subtitle}}
+
+                 </p>
+            </div>
+
+        <div ng-if="isMenuButtonVisible" ng-click="togClick()" class="ms-collapsed-menu pull-right">
+            <button type="button" class="btn toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </button>
+
+        </div>
+
+
+        </div>
+        <div class="ms-right-controls col-sm-6">
+            <div class="row">
+
+                <ul>
+
+                   <li>
+
+                        <label>Add Device &nbsp</label>
+                        <button class="btn btn-info btn-circle btn-lg" ng-click="doClick()"> <i class="large material-icons">add</i> </button>
+
+                        <add-device visible="showModal" title="Add a Device">
+                                <!--add devices template goes inside here-->
+                        </add-device>
+                    </li>
+
+                        <!--Profile menu -->
+
+        <li class="dropdown"><label class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-lg fa-user"></i> <b class="caret"></b></label>
+            <ul class="dropdown-menu bullet pull-right">
+                <li><a><i class="fa fa-cog"></i>&nbsp&nbsp;<label>Preferences</label> </a></li>
+                <li><a><i class="fa fa-envelope"></i>&nbsp&nbsp;<label>Contact Support</label></a></li>
+                <li><a href="login.html"><i class="fa fa-power-off"></i>&nbsp&nbsp;<label>Logout</label></a></li>
+
+            </ul>
+        </li>
+
+
+                </ul>
+
+            </div>
+
+         </div>
+
+    </div>
+
+</div>
+
+<div ng-transclude></div>
+<div ng-view class="ms-view"></div>
+
+
